@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import './app.scss'
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar/Navbar';
 const App = () => {
   return <div>
     <section id='Homepage'><Navbar/></section>

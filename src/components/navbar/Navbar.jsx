@@ -1,6 +1,5 @@
 import './Navbar.scss'
 import { motion } from 'framer-motion'
-import Sidebar from './Sidebar'
 
 const Navbar = () => {
   return (
