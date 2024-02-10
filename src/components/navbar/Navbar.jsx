@@ -1,12 +1,14 @@
+import SideBar from '../sidebar/SideBar'
 import './Navbar.scss'
 import { motion } from 'framer-motion'
 
 const Navbar = () => {
   return (
     <div className='Navbar'>
+      {/* Sidebar */}
+      <SideBar/>
       <div className="wrapper">
-        {/* Sidebar */}
-        <Sidebar/>
+
         <motion.span initial={{opacity:0,scale:0.3}} /* animate={{opacity:1,scale:1}} */ transition={{type:'spring'}} whileInView={{opacity:1,scale:1}}>Debasish</motion.span>
         <div className="social">
           <motion.a href='#' initial={{opacity:0,scale:0.5}} transition={{duration:0.5,delay:0.4}} whileInView={{opacity:1,scale:1}}><img src='/facebook.png' alt='facebook'/></motion.a>
