@@ -1,5 +1,7 @@
-.Navbar{
+.navbar{
     height: 100px;
+    /* display: flex;
+    justify-content: space-between; */
     .wrapper{
         max-width: 1366px;
         margin: auto;
@@ -10,6 +12,7 @@
         height: 100%;
 
         span{
+            z-index: 10;
             font-weight: bold;
         }
     }
