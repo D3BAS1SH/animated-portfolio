@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className='navbar'>
       <SideBar/>
       <div className="wrapper">
-        <motion.span initial={{opacity:0,scale:0.3}} animate={{opacity:1,scale:1}} transition={{type:'spring'}} whileInView={{opacity:1,scale:1}}>Debasish</motion.span>
+        <motion.span initial={{opacity:0,scale:0.3}} animate={{opacity:1,scale:1}} transition={{type:'spring'}} whileInView={{opacity:1,scale:1}}>Lama Dev</motion.span>
         
         <div className="social">
           <motion.a href='#' initial={{opacity:0,scale:0.5}} transition={{duration:0.5,delay:0.4}} whileInView={{opacity:1,scale:1}}><img src='/facebook.png' alt='facebook'/></motion.a>

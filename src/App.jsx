@@ -1,13 +1,18 @@
 import { motion } from 'framer-motion';
 import './app.scss'
 import Navbar from './components/navbar/Navbar';
+import Hero from './components/hero/Hero';
+import Parallax from './components/parallax/Parallax';
 const App = () => {
   return <div>
-    <section id='Homepage'><Navbar/></section>
-    <section id='Services'>PARALLAX</section>
+    <section id='Homepage'>
+      <Navbar/>
+      <Hero/>
+    </section>
+    <section id='Services'><Parallax/></section>
     <section>SERVICES</section>
     <section>PARALLAX</section>
-    <section id='Portfolio'>PORTFOLIO1</section>
+    <section id='Portfolio'><Parallax/></section>
     <section>PORTFOLIO2</section>
     <section>PORTFOLIO3</section>
     <section id='Contact'>CONTACT</section>
