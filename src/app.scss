@@ -1,6 +1,19 @@
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    ::-webkit-scrollbar{
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track{
+      background-color: transparent;
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color:beige;
+      border-radius: 5px;
+      width: 6px;
+    }
   }
   
   * {

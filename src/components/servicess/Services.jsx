@@ -1,34 +1,74 @@
+import { useRef } from "react";
 import "./services.scss";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+
+const variants = {
+  initial: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const Services = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, "-100px");
   return (
-    <div className="services">
-      <div className="textContainer">
+    <motion.div
+      className="services"
+      variants={variants}
+      initial="initial"
+      whileInView="animate" /* ref={ref} */
+      /* animate={isInView && 'animate'} */
+    >
+      <motion.div className="textContainer" variants={variants}>
         <p>
           I focus on helping your brand grow
           <br />
           and move forward
         </p>
         <hr />
-      </div>
+      </motion.div>
 
-      <div className="titleContainer">
+      <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="people image" />
           <h1>
-            <b>Unique</b> Ideas
+            <motion.b
+              initial={{ color: "#ffffff" }}
+              transition={{ duration: 0.2 }}
+              whileHover={{ color: "#ffa500" }}
+            >
+              Unique
+            </motion.b>{" "}
+            Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <b>For Your</b> Business
+            <motion.b
+              initial={{ color: "#ffffff" }}
+              transition={{ duration: 0.2 }}
+              whileHover={{ color: "#ffa500" }}
+            >
+              For Your
+            </motion.b>{" "}
+            Business
           </h1>
           <button>WHAT WE DO?</button>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="listContainer">
+      <motion.div className="listContainer" variants={variants}>
         <motion.div
           className="box"
           initial={{ backgroundColor: "#ffffff00", color: "#ffffff" }}
@@ -59,6 +99,7 @@ const Services = () => {
           </p>
           <button>GO</button>
         </motion.div>
+
         <motion.div
           className="box"
           initial={{ backgroundColor: "#ffffff00", color: "#ffffff" }}
@@ -74,6 +115,7 @@ const Services = () => {
           </p>
           <button>GO</button>
         </motion.div>
+
         <motion.div
           className="box"
           initial={{ backgroundColor: "#ffffff00", color: "#ffffff" }}
@@ -89,8 +131,8 @@ const Services = () => {
           </p>
           <button>GO</button>
         </motion.div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
