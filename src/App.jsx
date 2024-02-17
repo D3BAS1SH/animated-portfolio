@@ -5,6 +5,8 @@ import Hero from "./components/hero/Hero";
 import Parallax from "./components/parallax/Parallax";
 import Services from "./components/servicess/Services";
 import Portfolio from "./components/portfolio/Portfolio";
+import Contanct from "./components/contact/Contanct";
+
 const App = () => {
   return (
     <div>
@@ -22,7 +24,7 @@ const App = () => {
         <Parallax type="portfolio" />
       </section>
       <Portfolio />
-      <section id="Contact"></section>
+      <section id="Contact"><Contanct/></section>
       {/* <Test/> */}
     </div>
   );
