@@ -6,10 +6,12 @@ import Parallax from "./components/parallax/Parallax";
 import Services from "./components/servicess/Services";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contanct from "./components/contact/Contanct";
+import Cursor from "./components/cursor/Cursor";
 
 const App = () => {
   return (
     <div>
+      <Cursor/>
       <section id="Homepage">
         <Navbar />
         <Hero />
